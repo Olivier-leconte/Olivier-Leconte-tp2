@@ -1,28 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1ihjxk7wdqog"]
+[gd_scene load_steps=2 format=3 uid="uid://c1ihjxk7wdqog"]
 
-[ext_resource type="Texture2D" uid="uid://cef0mm6jccrgq" path="res://game icons (heart, diamond, star and lightning bolt)/heart/heart/sprite_4.png" id="1_s2f8l"]
 [ext_resource type="Script" uid="uid://cmamp3mgyeedn" path="res://script/pause.gd" id="2_kee8w"]
 
 [node name="ui" type="CanvasLayer"]
-
-[node name="vie" type="Panel" parent="."]
-offset_left = 519.0
-offset_top = 347.0
-offset_right = 567.0
-offset_bottom = 385.0
-
-[node name="TextureRect" type="TextureRect" parent="vie"]
-layout_mode = 0
-offset_left = 99.0
-offset_top = -194.0
-offset_right = 139.0
-offset_bottom = -154.0
-
-[node name="Sprite4" type="Sprite2D" parent="vie"]
-texture_filter = 1
-position = Vector2(27, 18)
-scale = Vector2(0.8099998, 0.76)
-texture = ExtResource("1_s2f8l")
 
 [node name="pause" type="Node" parent="."]
 script = ExtResource("2_kee8w")
@@ -64,9 +44,9 @@ anchor_top = 0.646
 anchor_right = 0.517
 anchor_bottom = 0.646
 offset_left = -185.406
-offset_top = -99.660034
+offset_top = -99.66
 offset_right = 186.594
-offset_bottom = 99.339966
+offset_bottom = 99.34
 theme_override_constants/separation = 7
 
 [node name="Continuer" type="Button" parent="pause/Panel_pause/VBoxContainer"]
@@ -82,15 +62,6 @@ texture_filter = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
 text = "Recommencer"
-
-[node name="score_pièce" type="Label" parent="."]
-texture_filter = 1
-offset_left = 1128.0
-offset_top = 6.0
-offset_right = 1168.0
-offset_bottom = 43.0
-theme_override_font_sizes/font_size = 27
-text = "0"
 
 [connection signal="pressed" from="pause/Panel_pause/VBoxContainer/Continuer" to="pause" method="_on_continuer_pressed"]
 [connection signal="pressed" from="pause/Panel_pause/VBoxContainer/Recommencer" to="pause" method="_on_quitter_pressed"]

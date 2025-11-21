@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 @onready var sprite = $AnimatedSprite2D
 @onready var jump_sfx: AudioStreamPlayer = $jump_sfx
-@onready var walking_sfx: AudioStreamPlayer = $walking_sfx
 
 
 const SPEED = 120.0
@@ -25,7 +24,6 @@ func _physics_process(delta):
 	velocity.x = input_dir * SPEED  # Toujours appliquer la vitesse
 	if input_dir != 0:
 		sprite.flip_h = (input_dir == -1)
-		walking_sfx.play()
 		
 
 	# --- SAUT ---
